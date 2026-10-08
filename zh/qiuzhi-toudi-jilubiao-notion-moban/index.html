@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>求职投递记录表 Notion 模板（免费精简版）</title>
+<meta name="description" content="一张 Notion 求职投递表：按状态记录每份投递，写清下一步和日期，自动算已投天数，带投递看板和跟进日历。免费复制，免费版 Notion 可用。">
+<link rel="canonical" href="https://normaluncle.github.io/job-search-toolkit/zh/qiuzhi-toudi-jilubiao-notion-moban/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求职投递记录表 Notion 模板（免费精简版）">
+<meta property="og:description" content="一张 Notion 求职投递表：按状态记录每份投递，写清下一步和日期，自动算已投天数，带投递看板和跟进日历。免费复制，免费版 Notion 可用。">
+<meta property="og:url" content="https://normaluncle.github.io/job-search-toolkit/zh/qiuzhi-toudi-jilubiao-notion-moban/">
+<meta property="og:image" content="https://normaluncle.github.io/job-search-toolkit/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://normaluncle.github.io/job-search-toolkit/og.png">
+<style>
+  :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--soft:#f6f8fa;--line:#e5e7eb;--accent:#2563eb;--accent-d:#1d4ed8;}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--fg);background:var(--bg)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);z-index:1}
+  nav .wrap{display:flex;gap:18px;align-items:center;height:52px;font-size:14px}
+  nav b{margin-right:auto}
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--fg)}
+  header{padding:64px 0 40px;text-align:center}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 14px;letter-spacing:-.02em}
+  h2{font-size:24px;margin:0 0 16px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .lead{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 28px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent);transition:.15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-d)}
+  .btn.ghost{color:var(--accent);background:#fff}
+  .btn.ghost:hover{background:#eff6ff}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+  ol.rules{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  ol.rules li{counter-increment:r;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative}
+  ol.rules li::before{content:counter(r);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+  ol.rules p{margin:0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card p{margin:0 0 10px;color:var(--muted);font-size:15px}
+  .card a{color:var(--accent);font-weight:600;text-decoration:none;font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{background:var(--soft);font-weight:600}
+  td.c,th.c{text-align:center}
+  .price{font-size:34px;font-weight:800;margin:6px 0 14px}
+  .zh{background:var(--soft)}
+  .zh ol{padding-left:22px}
+  .zh li{margin-bottom:8px}
+  code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:14px}
+  footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+  footer a{color:var(--muted)}
+
+  article{padding:40px 0 24px}
+  article h1{text-align:left}
+  article h2{margin-top:36px}
+  article table{margin:8px 0 18px}
+  pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto}
+  pre code{background:none;padding:0}
+  article a{color:var(--accent)}
+  .crumb{font-size:14px;margin:24px 0 0}
+  .crumb a{color:var(--accent);text-decoration:none}
+  .back{margin:32px 0 8px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b><a href="../../" style="color:var(--fg)">Job Search Toolkit</a></b>
+  <a href="../../">首页</a>
+  <a href="../../#guides">指南</a>
+</div></nav>
+
+<div class="wrap">
+<p class="crumb"><a href="../../">← 返回首页：Job Search Toolkit</a></p>
+<article>
+<h1>求职投递记录表 Notion 模板</h1>
+<p>投到十几家以后，很容易记不清投过谁、进展到哪、该跟进谁。这张表把每份投递放进同一个 Notion 数据库，每一条都写清楚下一步要做什么、哪天做。</p>
+<h2>表里有什么</h2>
+<p>每份投递占一行，字段如下：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>记什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司</td>
+<td>投递的公司</td>
+</tr>
+<tr>
+<td>岗位</td>
+<td>投的职位</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>想投 / 已投 / 笔试 / 面试 / Offer / 拒绝</td>
+</tr>
+<tr>
+<td>下一步</td>
+<td>接下来要做的一件事，比如「发跟进邮件」</td>
+</tr>
+<tr>
+<td>下一步日期</td>
+<td>哪天做</td>
+</tr>
+<tr>
+<td>已投天数</td>
+<td>从投递那天起自动计算</td>
+</tr>
+</tbody>
+</table>
+<p>自带两个视图：</p>
+<ul>
+<li><strong>投递看板</strong>：按状态分列，进了面试就把卡片拖到「面试」那一列。</li>
+<li><strong>跟进日历</strong>：所有「下一步日期」排在日历上，跟进不会漏。</li>
+</ul>
+<p>一条好用的规矩：连续两次跟进都没回音，就直接标成「拒绝」，别在上面耗着。</p>
+<h2>怎么用</h2>
+<p><a href="https://different-epoxy-5a6.notion.site/3f3ba46009bd8167ae42d9ca98e04ffd" target="_blank" rel="noopener">打开免费精简版</a>，点右上角「Duplicate」复制到自己的 Notion 里就能用，免费版 Notion 也可以。</p>
+<h2>常见问题</h2>
+<p><strong>状态能改吗？</strong> 能。这就是一个普通的 Notion 数据库，选项可以随便改名、增删。</p>
+<p><strong>手机上能用吗？</strong> 能，Notion 手机端可以直接看看板和日历。</p>
+</article>
+<div class="back"><a href="../../">← 返回首页</a>，查看最小追踪四条规则和中英文免费版。</div>
+</div>
+
+<footer><div class="wrap">
+  Job Search Toolkit · <a href="https://github.com/Normaluncle/job-search-toolkit">Source on GitHub</a>
+  <p style="margin-top:14px"><a href="https://fazier.com/launches/job-search-toolkit" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a></p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote Job Salary Data as CSV (Himalayas + Remote OK)</title>
+<meta name="description" content="Export remote job listings with salary ranges from Himalayas and Remote OK to CSV. Two pay-per-result Apify Actors, $0.80 per 1,000 jobs.">
+<link rel="canonical" href="https://normaluncle.github.io/job-search-toolkit/remote-job-salary-data-csv/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Remote Job Salary Data as CSV (Himalayas + Remote OK)">
+<meta property="og:description" content="Export remote job listings with salary ranges from Himalayas and Remote OK to CSV. Two pay-per-result Apify Actors, $0.80 per 1,000 jobs.">
+<meta property="og:url" content="https://normaluncle.github.io/job-search-toolkit/remote-job-salary-data-csv/">
+<meta property="og:image" content="https://normaluncle.github.io/job-search-toolkit/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://normaluncle.github.io/job-search-toolkit/og.png">
+<style>
+  :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--soft:#f6f8fa;--line:#e5e7eb;--accent:#2563eb;--accent-d:#1d4ed8;}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--fg);background:var(--bg)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);z-index:1}
+  nav .wrap{display:flex;gap:18px;align-items:center;height:52px;font-size:14px}
+  nav b{margin-right:auto}
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--fg)}
+  header{padding:64px 0 40px;text-align:center}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 14px;letter-spacing:-.02em}
+  h2{font-size:24px;margin:0 0 16px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .lead{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 28px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent);transition:.15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-d)}
+  .btn.ghost{color:var(--accent);background:#fff}
+  .btn.ghost:hover{background:#eff6ff}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+  ol.rules{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  ol.rules li{counter-increment:r;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative}
+  ol.rules li::before{content:counter(r);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+  ol.rules p{margin:0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card p{margin:0 0 10px;color:var(--muted);font-size:15px}
+  .card a{color:var(--accent);font-weight:600;text-decoration:none;font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{background:var(--soft);font-weight:600}
+  td.c,th.c{text-align:center}
+  .price{font-size:34px;font-weight:800;margin:6px 0 14px}
+  .zh{background:var(--soft)}
+  .zh ol{padding-left:22px}
+  .zh li{margin-bottom:8px}
+  code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:14px}
+  footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+  footer a{color:var(--muted)}
+
+  article{padding:40px 0 24px}
+  article h1{text-align:left}
+  article h2{margin-top:36px}
+  article table{margin:8px 0 18px}
+  pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto}
+  pre code{background:none;padding:0}
+  article a{color:var(--accent)}
+  .crumb{font-size:14px;margin:24px 0 0}
+  .crumb a{color:var(--accent);text-decoration:none}
+  .back{margin:32px 0 8px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b><a href="../" style="color:var(--fg)">Job Search Toolkit</a></b>
+  <a href="../">Home</a>
+  <a href="../#guides">Guides</a>
+</div></nav>
+
+<div class="wrap">
+<p class="crumb"><a href="../">← Back to Job Search Toolkit home</a></p>
+<article>
+<h1>Remote Job Salary Data as CSV</h1>
+<p>Two remote job boards publish salary information in a usable form: Himalayas (salary range, currency, period and seniority) and Remote OK (salary range in USD, plus tech tags). These two Apify Actors export those listings as rows, so you can filter and compare salaries in a spreadsheet or pandas.</p>
+<h2>Himalayas Remote Jobs Scraper</h2>
+<p><a href="https://apify.com/slate_cyclone/himalayas-jobs-scraper" target="_blank" rel="noopener">Open on Apify</a></p>
+<p>Input:</p>
+<pre><code class="language-json">{ &quot;keywords&quot;: &quot;python&quot;, &quot;salaryRequired&quot;: true, &quot;maxJobs&quot;: 100 }
+</code></pre>
+<p>Output fields: <code>title</code>, <code>companyName</code>, <code>employmentType</code>, <code>seniority</code>, <code>minSalary</code>, <code>maxSalary</code>, <code>currency</code>, <code>salaryPeriod</code>, <code>isWorldwide</code>, <code>publishedAt</code>, <code>url</code>.</p>
+<p>Use it when seniority matters, or when you need to know whether a role is open worldwide (<code>isWorldwide</code>).</p>
+<h2>Remote OK Jobs Scraper</h2>
+<p><a href="https://apify.com/slate_cyclone/remoteok-jobs-scraper" target="_blank" rel="noopener">Open on Apify</a></p>
+<p>Input:</p>
+<pre><code class="language-json">{ &quot;tags&quot;: [&quot;python&quot;, &quot;react&quot;], &quot;salaryRequired&quot;: true, &quot;maxJobs&quot;: 100 }
+</code></pre>
+<p>Output fields: <code>title</code>, <code>company</code>, <code>location</code>, <code>tags</code>, <code>salaryMinUsd</code>, <code>salaryMaxUsd</code>, <code>publishedAt</code>, <code>url</code>.</p>
+<p>Use it when you want everything already in USD and filterable by tech tags.</p>
+<h2>A note on comparing salaries</h2>
+<p>Himalayas listings use different currencies and pay periods. Filter on <code>currency</code> and <code>salaryPeriod</code> before you compare numbers, rather than assuming everything is yearly USD.</p>
+<h2>Price</h2>
+<p>Both Actors are pay per result: $0.80 per 1,000 jobs.</p>
+<p>Full walkthrough with pandas code: <a href="https://dev.to/wenwu_dev/how-to-export-remote-job-salary-data-to-csv-himalayas-remote-ok-36eb" target="_blank" rel="noopener">remote salary data tutorial on dev.to</a>.</p>
+</article>
+<div class="back"><a href="../">← Back to the homepage</a> for the 4 tracking rules, the free tracker and the other guides.</div>
+</div>
+
+<footer><div class="wrap">
+  Job Search Toolkit · <a href="https://github.com/Normaluncle/job-search-toolkit">Source on GitHub</a>
+  <p style="margin-top:14px"><a href="https://fazier.com/launches/job-search-toolkit" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a></p>
+</div></footer>
+
+</body>
+</html>
