@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Notion Job Application Tracker Template + Job Scrapers | Job Search Toolkit</title>
+<meta name="description" content="A free Notion job application tracker (English and Chinese) built on 4 simple rules: one status per application, a next action date, a two-follow-up limit, and a weekly check. Plus job-board scrapers for developers.">
+<meta name="keywords" content="notion job tracker, job application tracker, free notion template, job search template, 求职 投递追踪表, notion 模板, workday scraper, remoteok scraper, himalayas scraper, apify">
+<link rel="canonical" href="https://normaluncle.github.io/job-search-toolkit/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Notion Job Application Tracker (EN / 中文)">
+<meta property="og:description" content="Track every application in one table: status, company, role, and your next action date. Free to duplicate.">
+<meta property="og:url" content="https://normaluncle.github.io/job-search-toolkit/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--soft:#f6f8fa;--line:#e5e7eb;--accent:#2563eb;--accent-d:#1d4ed8;}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--fg);background:var(--bg)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);z-index:1}
+  nav .wrap{display:flex;gap:18px;align-items:center;height:52px;font-size:14px}
+  nav b{margin-right:auto}
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--fg)}
+  header{padding:64px 0 40px;text-align:center}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 14px;letter-spacing:-.02em}
+  h2{font-size:24px;margin:0 0 16px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .lead{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 28px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent);transition:.15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-d)}
+  .btn.ghost{color:var(--accent);background:#fff}
+  .btn.ghost:hover{background:#eff6ff}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+  ol.rules{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  ol.rules li{counter-increment:r;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative}
+  ol.rules li::before{content:counter(r);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+  ol.rules p{margin:0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card p{margin:0 0 10px;color:var(--muted);font-size:15px}
+  .card a{color:var(--accent);font-weight:600;text-decoration:none;font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  th{background:var(--soft);font-weight:600}
+  td.c,th.c{text-align:center}
+  .price{font-size:34px;font-weight:800;margin:6px 0 14px}
+  .zh{background:var(--soft)}
+  .zh ol{padding-left:22px}
+  .zh li{margin-bottom:8px}
+  code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:14px}
+  footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Job Search Toolkit</b>
+  <a href="#rules">Rules</a>
+  <a href="#full">Full version</a>
+  <a href="#developers">Developers</a>
+  <a href="#zh">中文</a>
+</div></nav>
+
+<header><div class="wrap">
+  <h1>The job application tracker<br>you can start using today</h1>
+  <p class="lead">A free Notion template that keeps every application in one table: status, company, role, and your next action date. Duplicate it into your own Notion and start logging in minutes.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://different-epoxy-5a6.notion.site/Job-Application-Tracker-Free-Lite-3f3ba46009bd8114882dc9dbfaa91212" target="_blank" rel="noopener">Get the free tracker (English)</a>
+    <a class="btn ghost" href="https://different-epoxy-5a6.notion.site/3f3ba46009bd8167ae42d9ca98e04ffd" target="_blank" rel="noopener">免费领取（中文版）</a>
+  </div>
+  <p class="note">Free. Open the page in Notion and click <b>Duplicate</b>.</p>
+</div></header>
+
+<section id="what"><div class="wrap">
+  <h2>What it is</h2>
+  <p>The hardest part of a job search usually isn't the resume. It's that everything is scattered: recruiter messages in one app, interview invites in your inbox, the company list in a notes file. Every morning starts with the same question: <em>who hasn't replied, and who am I talking to next?</em></p>
+  <p>The free lite version is just the tracker table: one row per application, with a status, the company, the role, a next action, and a next action date. That's enough to answer the morning question in one glance.</p>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>The 4 minimal-tracking rules</h2>
+  <ol class="rules">
+    <li><h3>One status per application</h3><p>Every application sits in exactly one stage, from applied through interview to offer, or closed. If you can't say which stage a company is in, you haven't really followed up.</p></li>
+    <li><h3>Company, role, next action date</h3><p>"Waiting to hear back" isn't progress. Progress is something you do: follow up today, send a portfolio by Friday. A follow-up without a date usually never happens.</p></li>
+    <li><h3>Two follow-ups, then close it</h3><p>After two follow-ups with no answer, the next status can only be withdrawn or declined. No more "I'll give it another week."</p></li>
+    <li><h3>A weekly check of three numbers</h3><p>New applications this week, companies at the interview stage, and applications that haven't moved in 7+ days. Every stale one gets a decision: follow up once more, or close it.</p></li>
+  </ol>
+  <p class="note">Honestly, these rules matter more than any template. Start with the free tracker; upgrade only if it sticks.</p>
+</div></section>
+
+<section id="full"><div class="wrap">
+  <h2>Full version — $9</h2>
+  <p>Disclosure: I built this, and the full version is paid. It includes everything in the free tracker, plus:</p>
+  <table>
+    <thead><tr><th>Feature</th><th class="c">Free lite</th><th class="c">Full</th></tr></thead>
+    <tbody>
+      <tr><td>Application tracker table</td><td class="c">✓</td><td class="c">✓</td></tr>
+      <tr><td>Interview log (open one page before each round)</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>Weekly review page</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>Company database (applications counted per company)</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>Resume versions (which resume went where)</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>Contacts</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>Board and calendar views</td><td class="c">—</td><td class="c">✓</td></tr>
+      <tr><td>English and Chinese versions</td><td class="c">EN or ZH</td><td class="c">Both</td></tr>
+    </tbody>
+  </table>
+  <div class="price">$9</div>
+  <div class="btns" style="justify-content:flex-start">
+    <!-- PAY_LINK -->
+    <a class="btn primary" id="pay-link" href="https://payhip.com/b/npJvz" target="_blank" rel="noopener">Get the full version — $9</a>
+  </div>
+</div></section>
+
+<section id="developers"><div class="wrap">
+  <h2>For developers</h2>
+  <p>If you'd rather pull job listings into your own tools, I also maintain three job-board scrapers that run on <a href="https://apify.com" target="_blank" rel="noopener">Apify</a>. Each returns structured job postings you can export as JSON or CSV, or call through the Apify API.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Workday Jobs Scraper</h3>
+      <p>Collects job postings from company career sites powered by Workday.</p>
+      <a href="https://apify.com/slate_cyclone/workday-jobs-scraper" target="_blank" rel="noopener">View on Apify →</a>
+    </div>
+    <div class="card">
+      <h3>Himalayas Jobs Scraper</h3>
+      <p>Collects remote job listings from the Himalayas job board.</p>
+      <a href="https://apify.com/slate_cyclone/himalayas-jobs-scraper" target="_blank" rel="noopener">View on Apify →</a>
+    </div>
+    <div class="card">
+      <h3>RemoteOK Jobs Scraper</h3>
+      <p>Collects remote job listings from RemoteOK.</p>
+      <a href="https://apify.com/slate_cyclone/remoteok-jobs-scraper" target="_blank" rel="noopener">View on Apify →</a>
+    </div>
+  </div>
+  <p class="note">The Actor pages are being listed on the Apify Store; if a link doesn't open yet, check back soon.</p>
+</div></section>
+
+<section id="zh" class="zh" lang="zh-CN"><div class="wrap">
+  <h2>中文：求职投递追踪表</h2>
+  <p>求职最耗人的往往不是写简历，是信息散着：HR 在聊天记录里，约面在邮件里，公司在备忘录里。每天开始都要想半天：谁还没回？下一个要聊的是哪家？</p>
+  <p>免费精简版只有一张投递追踪表：每条投递一个状态，加上公司、岗位、下次动作和下次动作日期。复制进自己的 Notion 就能用。</p>
+  <h3>最小追踪四条规则</h3>
+  <ol>
+    <li><b>每条投递只占一个状态。</b>说不清某家公司在哪个阶段，就说明还没真正跟进。</li>
+    <li><b>必填：公司、岗位、下次动作日期。</b>没有日期的跟进，几乎都会不了了之。</li>
+    <li><b>连续两次跟进没结果，就关掉。</b>下一个状态只能是放弃或被拒，不许再写「再等一周」。</li>
+    <li><b>每周只看三个数。</b>本周新投几条、进入面试几家、超过 7 天没动的几条。没动的必须给结论：再跟一次，还是放弃。</li>
+  </ol>
+  <div class="btns" style="justify-content:flex-start;margin:18px 0">
+    <a class="btn primary" href="https://different-epoxy-5a6.notion.site/3f3ba46009bd8167ae42d9ca98e04ffd" target="_blank" rel="noopener">免费领取中文版</a>
+  </div>
+  <p><b>完整版 $9</b>（中英双版）：在免费追踪表之外，多了面试记录、每周复盘、公司库（按公司计投递数）、简历版本、联系人、看板和日历视图。见上方 <a href="#full">Full version</a>。</p>
+</div></section>
+
+<footer><div class="wrap">
+  Job Search Toolkit · <a href="https://github.com/Normaluncle/job-search-toolkit">Source on GitHub</a>
+</div></footer>
+
+</body>
+</html>
