@@ -30,7 +30,7 @@ Disclosure: I built this, and the full version is paid. On top of the free track
 - Board and calendar views
 - English and Chinese versions
 
-👉 [Get the full version — $9](https://payhip.com/b/npJvz)
+👉 [Get the full version — $9](https://wenwutemplates.itch.io/job-search-tracker)
 
 ## For developers: job scrapers on Apify
 
