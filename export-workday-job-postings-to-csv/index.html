@@ -140,6 +140,19 @@
 </tbody>
 </table>
 <p>When the run finishes, export the dataset as CSV, JSON or Excel from Apify, or read it with the Apify API.</p>
+<h2>Sample output (real run)</h2>
+<p>This is unedited output from one run on 8 October 2026 against NVIDIA's public Workday site (<code>https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite</code>), search text <code>data engineer</code>, capped at 10 jobs. The first five rows:</p>
+<table>
+<thead><tr><th>title</th><th>location</th><th>timeType</th><th>postedDate</th><th>jobId</th></tr></thead>
+<tbody>
+<tr><td>Senior Interconnect Product Data Engineer</td><td>Israel, Yokneam</td><td>Full time</td><td>2026-07-28</td><td><code>JR2021975</code></td></tr>
+<tr><td>Senior Data Center Engineer</td><td>Israel, Tel Aviv</td><td>Full time</td><td>2026-08-20</td><td><code>JR2023708</code></td></tr>
+<tr><td>SAP MM/PP Master Data Engineer - Enterprise Data Management</td><td>India, Gurugram</td><td>Full time</td><td>2026-09-29</td><td><code>JR2026497</code></td></tr>
+<tr><td>Senior Data Backend Engineer</td><td>US, CA, Santa Clara</td><td>Full time</td><td>2026-10-01</td><td><code>JR2020354</code></td></tr>
+<tr><td>Data Application Engineer, Enterprise Data Management</td><td>US, CA, Santa Clara</td><td>Full time</td><td>2026-09-21</td><td><code>JR2024551</code></td></tr>
+</tbody>
+</table>
+<p>Download all 10 rows: <a href="sample-nvidia-data-engineer.csv">sample-nvidia-data-engineer.csv</a> (12 of the output columns; <code>descriptionText</code> trimmed to 300 characters, and <code>descriptionHtml</code> left out to keep the file small). With details on (the default), <code>postedDate</code> is the job's real start date from Workday, so a "Posted 30+ Days Ago" job still gets its exact date (for example 2026-07-28 in the first row).</p>
 <h2>What people use it for</h2>
 <ul>
 <li><strong>Watching target companies</strong>: schedule a daily run and compare <code>jobId</code>s to spot new openings.</li>
