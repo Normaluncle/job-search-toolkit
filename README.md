@@ -30,17 +30,17 @@ Disclosure: I built this, and the full version is paid. On top of the free track
 - Board and calendar views
 - English and Chinese versions
 
-👉 [Get the full version — $9](https://wenwutemplates.itch.io/job-search-tracker)
+👉 [Get the full version — $9](https://wenwutemplates.itch.io/job-search-tracker) · [Pay with crypto](https://nowpayments.io/payment/?iid=5011550419)
 
 ## For developers: job scrapers on Apify
 
 | Actor | What it does |
 |---|---|
-| Workday Jobs Scraper (coming soon) | Job postings from Workday-powered career sites |
-| Himalayas Jobs Scraper (coming soon) | Remote job listings from Himalayas |
-| RemoteOK Jobs Scraper (coming soon) | Remote job listings from RemoteOK |
+| [Workday Jobs Scraper](https://apify.com/slate_cyclone/workday-jobs-scraper) | Job postings from Workday-powered career sites |
+| [Himalayas Jobs Scraper](https://apify.com/slate_cyclone/himalayas-jobs-scraper) | Remote job listings from Himalayas |
+| [RemoteOK Jobs Scraper](https://apify.com/slate_cyclone/remoteok-jobs-scraper) | Remote job listings from RemoteOK |
 
-Results export as JSON/CSV or via the Apify API. (The Actor pages are being listed on the Apify Store; if a link doesn't open yet, check back soon.)
+Results export as JSON/CSV or via the Apify API.
 
 ## 中文简介
 
